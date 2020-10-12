@@ -1,0 +1,116 @@
+{% extends 'gallery/base.html' %}
+{% block content %} 
+{{ block.super}}
+
+<div class="container">
+
+  <!-- Looping through news   -->
+  {% for gallery_item in gallery %}
+
+  <div class="row">
+    <!-- displaying News articles -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <h2 class="text-center"> {{ gallery_item.title }} </h2>
+    </div>
+
+
+    <!--Display news Article images  -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img src="{{gallery_item.article_image.url}}" class="img-responsive" alt="Image">
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <h2 class="text-center">There No Gallery Items</h2>
+  </div>
+  {% endfor %}
+
+</div>
+<div class="container">
+  <div class="row">
+<!-- Button trigger modal -->
+ <div class="col-md-4">
+ <a href="" data-toggle="modal" data-target="#exampleModal"><img src="https://bit.ly/37Ux44d"   class="img-responsive"   width="300" height="300" ></a>
+</div>
+<div class="col-md-4">
+ <a href="" data-toggle="modal" data-target="#exampleModal2"><img src="https://bit.ly/2ttcwkw"   class="img-responsive"   width="300" height="300" ></a>
+</div>
+<div class="col-md-4">
+ <a href="" data-toggle="modal" data-target="#exampleModal3"><img src="https://bit.ly/2RU6IK9"   class="img-responsive"   width="300" height="300" ></a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Cars Collection</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+     <img src="https://bit.ly/37Ux44d"   class="img-responsive" >&nbsp;
+     <p>Created:oct.12.2020</p>
+     <p>location:Nairobi</p>
+     </div>
+     
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary">copy image</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cars Collection</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <img src="https://bit.ly/2ttcwkw"   class="img-responsive" >&nbsp;
+      <p>Created:oct.12.2020</p>
+      <p>location:Nairobi</p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">copy image</button>
+      </div>
+    </div>
+  </div>
+ </div>
+ <!-- Modal3 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cars Collection</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <img src="https://bit.ly/2RU6IK9"   class="img-responsive" >&nbsp;
+      <p>Created:oct.12.2020</p>
+      <p>location:Nairobi</p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">copy image</button>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+h1
+{
+  color:BLACK;
+}
+.myimage{
+  height: 400px;
+}
+.steve{
+  background-image: url("https://bit.ly/3lORr9N");
+  background-size: cover;
+  height: 50vh;
+  
+}
+.ongati{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+
+}
+.ongati h1{
+  color: white;
+  
+}
