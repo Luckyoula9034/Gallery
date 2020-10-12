@@ -1,21 +1,25 @@
 {% load bootstrap3 %}
+{% load static%}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
 
   {% if title %}
-  <title>Gallery - {{title}}</title>
+  <title>Moringa Tribune - {{title}}</title>
   {% else %}
-    <title> Gallery </title>
+    <title> Moringa Tribune </title>
   {% endif %}
 
   {% block styles %}
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basemedia.css' %}">
   {% endblock %}
 
 </head>
 <body>
+    {% include "navbar.html" %}
+
     {% block content %} <h1 class='text-center'>News for {{date|date:"l d-F Y"}}</h1> {%endblock%}
 
     {% block scripts %}
