@@ -5,7 +5,7 @@ import datetime as dt
 def welcome(request):
     return HttpResponse('Welcome to the gallery')
 
-def news_of_day(request):
+def media_of_day(request):
     date = dt.date.today()
     html = f'''
         <html>
