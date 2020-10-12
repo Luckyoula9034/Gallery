@@ -9,6 +9,7 @@ def welcome(request):
 
 def media_of_day(request):
     date = dt.date.today()
+    return render(request, 'all-media/today-media.html', {"date": date,})
     
     # FUNCTION TO CONVERT DATE OBJECT TO FIND EXACT DAY
     day = convert_dates(date)
