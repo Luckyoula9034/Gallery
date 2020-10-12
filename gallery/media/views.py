@@ -1,11 +1,11 @@
 
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import  Http404
 import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to the Gallery')
+   return render(request, 'welcome.html')
 
 def media_of_day(request):
     date = dt.date.today()
