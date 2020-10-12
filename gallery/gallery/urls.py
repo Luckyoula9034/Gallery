@@ -6,5 +6,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^media/',include('media.urls'))
+    url(r'^media/',include('media.urls')),
+    url(r'',include('media.urls'))
 ]
