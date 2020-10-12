@@ -12,6 +12,10 @@ class Editor(models.Model):
     def __str__(self):
         return self.name
 
+    def save_editor(self):
+        self.save()
+    
+
    class Article(models.Model):
     title = models.CharField(max_length =60)
     post = models.TextField()
